@@ -4,3 +4,209 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Claim Approval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .approve-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+            .approve-btn:hover {
+                background-color: #218838;
+            }
+
+        .reject-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+
+            .reject-btn:hover {
+                background-color: #c82333;
+            }
+
+        .view-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+            .view-btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contract Claim Approval</h1>
+    </header>
+
+    <div class="container">
+        <h2>Enter Your Details</h2>
+        <form action="#" method="post">
+            <label for="manager-name">Name</label>
+            <input type="text" id="manager-name" name="manager-name" placeholder="Enter your name">
+
+            <label for="manager-role">Role</label>
+            <select id="manager-role" name="manager-role">
+                <option value="Project Manager">Project Manager</option>
+                <option value="Program Coordinator">Program Coordinator</option>
+            </select>
+
+            <label for="contract-select">Select Contract to Review</label>
+            <select id="contract-select" name="contract-select">
+                <option value="John Doe - 01/09/2024 - 30/09/2024">John Doe - 01/09/2024 - 30/09/2024</option>
+                <option value="Jane Smith - 01/08/2024 - 31/08/2024">Jane Smith - 01/08/2024 - 31/08/2024</option>
+                <option value="Emily Clark - 01/07/2024 - 31/07/2024">Emily Clark - 01/07/2024 - 31/07/2024</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Pending Contract Claims</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lecturer Name</th>
+                    <th>Contract Period</th>
+                    <th>Total Hours Worked</th>
+                    <th>Total Expenses</th>
+                    <th>Supporting Documents</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Row for a Claim -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>01/09/2024 - 30/09/2024</td>
+                    <td>40 hours</td>
+                    <td>$500</td>
+                    <td><button class="view-btn">View Documents</button></td>
+                    <td class="action-buttons">
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+                <!-- Repeat the above row for additional claims as needed -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>01/08/2024 - 31/08/2024</td>
+                    <td>50 hours</td>
+                    <td>$300</td>
+                    <td><button class="view-btn">View Documents</button></td>
+                    <td class="action-buttons">
+                        <button class="approve-btn">Approve</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Approved Contract Claims</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lecturer Name</th>
+                    <th>Contract Period</th>
+                    <th>Total Hours Worked</th>
+                    <th>Total Expenses</th>
+                    <th>Supporting Documents</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample Row for an Approved Claim -->
+                <tr>
+                    <td>Emily Clark</td>
+                    <td>01/07/2024 - 31/07/2024</td>
+                    <td>60 hours</td>
+                    <td>$400</td>
+                    <td><button class="view-btn">View Documents</button></td>
+                    <td>Approved</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
+
